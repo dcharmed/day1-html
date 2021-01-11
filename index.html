@@ -1,0 +1,193 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Training</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;600;900&display=swap" rel="stylesheet">  
+    <style type="text/css">
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+        div {
+            margin: 10px;
+        }
+        h2  {
+            color: brown;
+            font-size: x-large;
+        }
+        h1 {
+            text-align: center;
+        }
+        #box1 {
+            border-width: thin;
+            border-style: solid;
+            border-color: gray;
+            padding: 5px;
+            width: fit-content;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        #box2 {
+            background-color: hotpink;
+            width: 400px;
+            margin: 10px auto;
+        }
+        .smaller {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/banner.png" width="100%" alt=""/>
+    <h1>Hello My World!</h1>
+    <div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat illum quo, magnam libero tenetur esse quaerat nobis consectetur fugit maxime id, quos excepturi consequatur quae quia officiis beatae omnis incidunt.</p>
+    <hr/>
+    <h2>Things I <strong>WILL</strong> learn</h2>
+        <ul>
+            <li>Recap HTML & CSS
+                <ul>
+                    <li>Apa tag  digunakan dalam html5 apa tag lama yang dah tak digunakan?</li>
+                        <ul>
+                            <li>
+                                What is element? - anythig after square bracket "<" p, img, h1, table... <strong> semua</strong> element in html represented as a box</li>
+                                
+                            </li>
+                            <li>attribute - anything within the element - src, href, target, id...</li>
+                            <li>entity - coded - &copy;&gt;&lt</li>
+                        </ul>
+                    <li>Type in keyword and tab to get autocomplete codes</li>
+                    <li>What is HTML? - HYper text markup language - to build structure of your website</li>
+                    <li>CSS - cascading style sheet - define the style of your website content (design)</li>
+                        <ul>
+                            <li>Do you know there are 147 colors available? check out <a href="http://www.colors.commutercreative.com/" target="_blank">147 colors Website</a></li>
+                            <li>You can use chrome extension </li>
+                            <li>5 scc atrribute can be modified <br>
+                                - height | width | border | padding | margin</li>
+                        </ul>
+                    <li>Javascript - define interactivity of your website - animation</li>
+                </ul>
+            </li>
+            <li>Recap <strong>Box model</strong> </li>
+            <ul>
+                <li>Div - create new line (block element</li>
+                <li>span - will not create new line (inline element)</li>
+            </ul>
+                <h3>CSS Box Model</h3>
+                <div id="box1">
+                    Ini adalah box identified by the id attribute (Id must be unique)
+                </div>
+                <div id="box2">
+                    Ini adalah box kedua aligned center <br>
+                    <ul>
+                        <li>must give box a width</li>
+                        <li>set margin left & right to auto</li>
+                    </ul>
+
+                </div>
+            <li>Recap layout & positioning with Flexbox</li>
+        </ul>
+    <hr>
+    <h2>Hey <strong>TIPS & TRICKS</strong></h2>
+    <ol>
+        <li>GIT</li>
+        <ul>
+            <li><strong>GIT</strong> is a source code management process or tool. with git you can backup your code, perform collaboration with other team member and manage history. Another similar = subversion</li>
+            <li><strong>Github/Gitlab.Bitbucket</strong> is the PLACE where you backup or upload your code.</li>
+            <li>Command:</li>
+            <ul>
+                <li>git init</li>
+                <li>git add .</li>
+                <li>git commit -m "i update this"</li>
+                <li>git remote origin</li>
+                <li><em>One time configuration after first install:<br>
+                    <span class="smaller">
+                     git config --global <username> "first name"<br>
+                     git config --global <useremail> "emailaddress"
+                    </span>
+                    </em></li>
+            </ul>
+            <li><em>How to open folder project direct to CMD - open file explorer and type "cmd" in the path direktori press enter</em></li>
+        </ul>
+        <li>GIT</li>
+    </ol>
+    
+    <hr>
+    <h2>What I <em>Need</em> to prepare</h2>
+        <ol>
+            <li>Understand the concept of HTML & CSS</li>
+            <li>Do a portfolio HTML page using CSS Box Model</li>
+            <li>Do a booking website using layout & positioning</li>
+        </ol>
+    <hr>
+    <h2>My friends</h2>
+    <table class="table" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Department</th>
+            </tr>
+            <tr>
+                <td>Azlina binti Abd Hamid</td>
+                <td>azlinahamid@mampu.gov.my</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Nor Faizah binti Badaruni</td>
+                <td>faizah@mampu.gov.my</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Kamarulaziah binti Kamaruddaman</td>
+                <td>aziah@mampu.gov.my</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Haine Yusnida binti Mohd Yusoff</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Masrina Masngut</td>
+                <td>masrina@mampu.gov.my</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Nurul Hafizi bin Abu Bakar</td>
+                <td>hafizi@mampu.gov.my</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Mohd Razif Azmal bin Mohd Othman</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Adawiyah binti Md Ashar</td>
+                <td>adawiyah@mampu.gov.my</td>
+                <td>Bahagian Pembangunan Aplikasi MAMPU</td>
+            </tr>
+            <tr>
+                <td>Nor Zulati Embong</td>
+                <td>zulati@mampu.gov.my</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Norasmiza binti Rusli</td>
+                <td>norasmiza@mampu.gov.my</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Neelofa</td>
+                <td>naelofar@naelofar.com</td>
+                <td>Naelofar Sdn. Bhd.</td>
+            </tr>
+        </thead>
+    </table>
+</div>
+</body>
+</html>

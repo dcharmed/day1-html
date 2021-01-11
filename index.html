@@ -36,7 +36,11 @@
             margin: 10px auto;
         }
         .smaller {
-            font-size: 20px;
+            font-size: 14px;
+            background-color: black;
+            color: white;
+            margin: 5px;
+            height: auto;
         }
     </style>
 </head>
@@ -99,18 +103,21 @@
             <li><strong>Github/Gitlab.Bitbucket</strong> is the PLACE where you backup or upload your code.</li>
             <li>Command:</li>
             <ul>
-                <li>git init</li>
-                <li>git add .</li>
-                <li>git commit -m "i update this"</li>
-                <li>git remote origin</li>
-                <li><em>One time configuration after first install:<br>
-                    <span class="smaller">
-                     git config --global <username> "first name"<br>
-                     git config --global <useremail> "emailaddress"
+                <li><em>One time configuration after first install:</em><br>
+                    <span class="smaller">git config --global user.name "your user name"<br>git config --global user.email "emailaddress"
                     </span>
-                    </em></li>
+                    </li>
+                <li>go to project path in cmd</li>
+                    <span class="smaller">git init</span><br>
+                    <span class="smaller">git add </span><br>
+                    <span class="smaller">git commit -m "i update this"</span><br>
+                    <span class="smaller">git remote origin</span><br>
+                    <span class="smaller">git push -u origin main</span>
+                
+                
             </ul>
             <li><em>How to open folder project direct to CMD - open file explorer and type "cmd" in the path direktori press enter</em></li>
+            <li><em>You can share your project uploaded to git to friends - Go to GIT Project > Settings > GitHub Pages change "None" to "Master" and SAVE<br> Then URL created will appeared. Share the links with others</em></li>
         </ul>
         <li>GIT</li>
     </ol>

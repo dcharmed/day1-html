@@ -12,11 +12,13 @@
 
         }
         #main {
-            margin: 10px auto;
-            width: 600px;
+            margin: 0px auto;
             background-color: ffffff;
-            padding: 60px 150px;
-            border: double black 5px;
+            padding: 3% 10%;
+            border: double black 0.25em;
+            min-width: 600px;
+            font-size: 1.2em;
+            width: 50%;
         }
         #header {
             text-align: center;
@@ -24,20 +26,17 @@
         #menu {
             overflow: auto;
             white-space: nowrap;
-            border-top-color: black;
-            border-top-style: solid;
-            border-top-width: 3px;
+            border-top: solid black 0.25em;
+            border-bottom: solid black 0.05em;
             text-align: center;
             margin: 10px auto;
-            border-bottom-style: solid;
-            border-bottom-width: 1px;
+            font-size: 1em;
         }
         #menu li {
             display: inline-block;
             color: black;
             text-align: center;
-            padding: 5px;
-            margin-left: 10px;
+            padding: 3%;
             text-decoration: none;
         }
         ul li a {
@@ -64,13 +63,14 @@
             font-weight:bolder;
         }
         .h-3 {
-            font-size: 30px;
+            font-size: 2em;
             text-transform: uppercase;
             font-weight:bolder;
         }
-        #img-main {
+        #box1 {
             margin: 10px auto;
             text-align: center;
+            
         }
     </style>
 </head>
@@ -88,8 +88,8 @@
                 <li>Contact</li>
             </ul>
         </div>
-        <div>
-            <img src="img/keys.jpg" id="img-main" alt="">
+        <div id="box1">
+            <img src="img/keys.jpg" alt="">
         </div>
         <div id="content-main">
             We specialize in the sale and repair of classic keyboards, in particular the Fender Rhodes, wurlitzer EP200, and Hohner Clavinet

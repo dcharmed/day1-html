@@ -11,8 +11,35 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
         }
-        div {
+        #content {
             margin: 10px;
+        }
+        /* Style tab links */
+        .tablink {
+            background-color: white;
+            border-top-color: #555;
+            border-top-width: 3px;
+            border-top-style: solid;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 20%;
+            font-weight: bolder;
+        }
+
+        .tablink:hover {
+            /*background-color: #777;*/
+            text-decoration: underline;
+        }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+        display: none;
+        padding: 100px 20px;
+        height: 100%;
         }
         h2  {
             color: brown;
@@ -44,14 +71,65 @@
         }
     </style>
 </head>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script> 
+$(function(){
+  $("#includedContent").load("keepcalm.html"); 
+});
+</script> 
 <body>
     <img src="img/banner.png" width="100%" alt=""/>
-    <h1>Lets Nerd</h1>
-    <div>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat illum quo, magnam libero tenetur esse quaerat nobis consectetur fugit maxime id, quos excepturi consequatur quae quia officiis beatae omnis incidunt.</p>
-    <hr/>
-    <h2>Things I <strong>WILL</strong> learn</h2>
-        <ul>
+    <button class="tablink" onclick="openPage('notes', this, '')" id="defaultOpen">Notes</button>
+    <button class="tablink" onclick="openPage('d1', this, '')">Day 1</button>
+    <button class="tablink" onclick="openPage('d2', this, '')">Day 2</button>
+    <button class="tablink" onclick="openPage('d3', this, '')">Day 3</button>
+    <button class="tablink" onclick="openPage('d4', this, '')">About Us</button>
+    <div id="notes" class="tabcontent">
+        <div id="content">
+            <h2>What I <em>Need</em> to prepare</h2>
+                <ol>
+                    <li>Understand the concept of HTML & CSS</li>
+                    <li>Do a portfolio HTML page using CSS Box Model</li>
+                    <li>Do a booking website using layout & positioning</li>
+                </ol>
+            <hr>
+            <h2>Hey <strong>TIPS & TRICKS</strong></h2>
+            <ol>
+                <li>GIT</li>
+                <ul>
+                    <li><strong>GIT</strong> is a source code management process or tool. with git you can backup your code, perform collaboration with other team member and manage history. Another similar = subversion</li>
+                    <li><strong>Github/Gitlab.Bitbucket</strong> is the PLACE where you backup or upload your code.</li>
+                    <li>Command:</li>
+                    <ul>
+                        <li><em>One time configuration after first install:</em><br>
+                            <span class="smaller">git config --global user.name "your user name"<br>git config --global user.email "emailaddress"
+                            </span>
+                            </li>
+                        <li>go to project path in cmd</li>
+                            <span class="smaller">git init</span><br>
+                            <span class="smaller">git add </span><br>
+                            <span class="smaller">git commit -m "i update this"</span><br>
+                            <span class="smaller">git remote origin</span><br>
+                            <span class="smaller">git push -u origin main</span>
+                        
+                        
+                    </ul>
+                    <li><em>How to open folder project direct to CMD - open file explorer and type "cmd" in the path direktori press enter</em></li>
+                    <li><em>You can share your project uploaded to git to friends - Go to GIT Project > Settings > GitHub Pages change "None" to "Master" and SAVE<br> Then URL created will appeared. Share the links with others</em></li>
+                </ul>
+                <li>W3C VALIDATION</li>
+                <ul>
+                    <li>Check your markup validation - https://validator.w3.org/</li>
+                </ul>
+            </ol>
+            
+        </div>
+    </div>
+
+    <div id="d1" class="tabcontent">
+        <h3>Day 1 - Today I learn</h3>
+        <p>View page here <a href="keepcalm.html" target="_blank">KEEP CALM</a></p> 
+        <ol>
             <li>Recap HTML & CSS
                 <ul>
                     <li>Apa tag  digunakan dalam html5 apa tag lama yang dah tak digunakan?</li>
@@ -80,121 +158,148 @@
                 <li>Div - create new line (block element</li>
                 <li>span - will not create new line (inline element)</li>
             </ul>
-                <h3>CSS Box Model</h3>
-                <div id="box1">
-                    Ini adalah box identified by the id attribute (Id must be unique)
-                </div>
-                <div id="box2">
-                    Ini adalah box kedua aligned center <br>
-                    <ul>
-                        <li>must give box a width</li>
-                        <li>set margin left & right to auto</li>
-                    </ul>
+            <h3>CSS Box Model</h3>
+            <div id="box1">
+                Ini adalah box identified by the id attribute (Id must be unique)
+            </div>
+            <div id="box2">
+                Ini adalah box kedua aligned center <br>
+                <ul>
+                    <li>must give box a width</li>
+                    <li>set margin left & right to auto</li>
+                </ul>
 
-                </div>
-            <li>Recap layout & positioning with Flexbox</li>
-        </ul>
-    <hr>
-    <h2>Hey <strong>TIPS & TRICKS</strong></h2>
-    <ol>
-        <li>GIT</li>
-        <ul>
-            <li><strong>GIT</strong> is a source code management process or tool. with git you can backup your code, perform collaboration with other team member and manage history. Another similar = subversion</li>
-            <li><strong>Github/Gitlab.Bitbucket</strong> is the PLACE where you backup or upload your code.</li>
-            <li>Command:</li>
-            <ul>
-                <li><em>One time configuration after first install:</em><br>
-                    <span class="smaller">git config --global user.name "your user name"<br>git config --global user.email "emailaddress"
-                    </span>
-                    </li>
-                <li>go to project path in cmd</li>
-                    <span class="smaller">git init</span><br>
-                    <span class="smaller">git add </span><br>
-                    <span class="smaller">git commit -m "i update this"</span><br>
-                    <span class="smaller">git remote origin</span><br>
-                    <span class="smaller">git push -u origin main</span>
-                
-                
-            </ul>
-            <li><em>How to open folder project direct to CMD - open file explorer and type "cmd" in the path direktori press enter</em></li>
-            <li><em>You can share your project uploaded to git to friends - Go to GIT Project > Settings > GitHub Pages change "None" to "Master" and SAVE<br> Then URL created will appeared. Share the links with others</em></li>
-        </ul>
-        <li>GIT</li>
-    </ol>
-    
-    <hr>
-    <h2>What I <em>Need</em> to prepare</h2>
-        <ol>
-            <li>Understand the concept of HTML & CSS</li>
-            <li>Do a portfolio HTML page using CSS Box Model</li>
-            <li>Do a booking website using layout & positioning</li>
+            </div>
         </ol>
-    <hr>
-    <h2>My friends</h2>
-    <table class="table" border="1">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Department</th>
-            </tr>
-            <tr>
-                <td>Azlina binti Abd Hamid</td>
-                <td>azlinahamid@mampu.gov.my</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Nor Faizah binti Badaruni</td>
-                <td>faizah@mampu.gov.my</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Kamarulaziah binti Kamaruddaman</td>
-                <td>aziah@mampu.gov.my</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Haine Yusnida binti Mohd Yusoff</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Masrina Masngut</td>
-                <td>masrina@mampu.gov.my</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Nurul Hafizi bin Abu Bakar</td>
-                <td>hafizi@mampu.gov.my</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Mohd Razif Azmal bin Mohd Othman</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Adawiyah binti Md Ashar</td>
-                <td>adawiyah@mampu.gov.my</td>
-                <td>Bahagian Pembangunan Aplikasi MAMPU</td>
-            </tr>
-            <tr>
-                <td>Nor Zulati Embong</td>
-                <td>zulati@mampu.gov.my</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Norasmiza binti Rusli</td>
-                <td>norasmiza@mampu.gov.my</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Neelofa</td>
-                <td>naelofar@naelofar.com</td>
-                <td>Naelofar Sdn. Bhd.</td>
-            </tr>
-        </thead>
-    </table>
-</div>
+    </div>
+
+    <div id="d2" class="tabcontent">
+        <h3>Day 2 - Today I Learn</h3>
+        <p>View page here <a href="layout.html" target="_blank">Elphies</a></p> 
+            <ol>
+                <li>Recap layout & positioning with Flexbox</li>
+                <ul>
+                    <li><strong>FlexBox</strong></li>
+                    <ul>
+                        <li>How to approach layout</li>
+                        <li>
+                            <strong>CSS units (absolute, relative, percentage)</strong><br>
+                            - Font size : rem<br>
+                            - Padding : em<br>
+                            - Widths: em / percentage (%)<br>
+                        </li>
+
+                        <li>
+                            <strong>Flexbox basics</strong><br>
+                            - layout : col value<br>
+                            - justify content : space-between,  <br>
+                            - align items : flex-start, flex-end
+                        
+                        </li>
+                        <li>
+                            <strong>Media query basics</strong><br>
+                            - How to break positioning
+                        </li>
+                    </ul>
+                    <li><strong>Bootstrap</strong></li>
+                    <ul>
+                        <li>Framework - to build responsive website easily</li>
+                    </ul>
+                </ul>
+            </ol>
+    </div>
+
+    <div id="d3" class="tabcontent">
+        <h3>Day 3</h3>
+        <p>View page here <a href="responsive.html" target="_blank">Pianist</a></p> 
+        </div>
+
+    <div id="d4" class="tabcontent">
+        <h3>My friends</h3>
+        <table class="table" border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                </tr>
+                <tr>
+                    <td>Azlina binti Abd Hamid</td>
+                    <td>azlinahamid@mampu.gov.my</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Nor Faizah binti Badaruni</td>
+                    <td>faizah@mampu.gov.my</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Kamarulaziah binti Kamaruddaman</td>
+                    <td>aziah@mampu.gov.my</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Haine Yusnida binti Mohd Yusoff</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Masrina Masngut</td>
+                    <td>masrina@mampu.gov.my</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Nurul Hafizi bin Abu Bakar</td>
+                    <td>hafizi@mampu.gov.my</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Mohd Razif Azmal bin Mohd Othman</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Adawiyah binti Md Ashar</td>
+                    <td>adawiyah@mampu.gov.my</td>
+                    <td>Bahagian Pembangunan Aplikasi MAMPU</td>
+                </tr>
+                <tr>
+                    <td>Nor Zulati Embong</td>
+                    <td>zulati@mampu.gov.my</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Norasmiza binti Rusli</td>
+                    <td>norasmiza@mampu.gov.my</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Neelofa</td>
+                    <td>naelofar@naelofar.com</td>
+                    <td>Naelofar Sdn. Bhd.</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <script>
+        function openPage(pageName,elmnt,color) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+          document.getElementById(pageName).style.display = "block";
+          elmnt.style.backgroundColor = color;
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+    </script>
+    
 </body>
 </html>
